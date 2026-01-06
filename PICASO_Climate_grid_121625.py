@@ -395,7 +395,7 @@ def get_gridvals_PICASO_TP():
         A tuple array of each array of input parameters to run via parallelization and return a 1D climate PT profile.
     
     """
-    
+    """
     # True Values to replace after test case:
     rad_plan_earth_units = np.linspace(1.6, 4, 5) # in units of xEarth radii
     log10_planet_metallicity = np.linspace(3, 3000, 10) # in units of solar metallicity, right now should be a string but that was opacity dependent (which may no longer depend on metallicities)
@@ -405,12 +405,12 @@ def get_gridvals_PICASO_TP():
 
     """
     # Test Case:
-    rad_plan_earth_units = 2 # in units of xEarth radii
-    log10_planet_metallicity = '3' # in units of solar metallicity
-    tint_K = 100 # in Kelvin
-    semi_major_AU = 1 # in AU 
+    rad_plan_earth_units = 2.61 # in units of xEarth radii
+    log10_planet_metallicity = '0.5' # in units of solar metallicity
+    tint_K = 155 # in Kelvin
+    semi_major_AU = 1.047920906403798 # in AU 
     ctoO_solar = '1' # in units of solar C/O
-    """
+
 
     gridvals = (rad_plan_earth_units, log10_planet_metallicity, tint_K, semi_major_AU, ctoO_solar)
     
@@ -420,15 +420,15 @@ if __name__ == "__main__":
 
     """
     To execute running 1D PICASO climate model for the range of values in get_gridvals_PICASO_TP, type the folling command into your terminal:
-    # mpiexec -n X python PICASO_Climate_grid.py
+    # mpiexec -n X python PICASO_Climate_grid_121625.py
 
     """
     
     gridutils.make_grid(
         model_func=PICASO_climate_model, 
         gridvals=get_gridvals_PICASO_TP(), 
-        filename='results/PICASO_climate_fv.h5', 
-        progress_filename='results/PICASO_climate_fv.log'
+        filename='results/PICASO_climate_updatop_test.h5', 
+        progress_filename='results/PICASO_climate_updatop_test.log'
     )
 
 
