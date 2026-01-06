@@ -7,7 +7,7 @@ import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 
-def run_climate(filename, opacity_ck):
+def run_climate(filename, opacity_ck, chem_method):
 
     # Initialize
     cl_run = jdi.inputs(calculation="planet", climate=True)
@@ -54,7 +54,7 @@ def run_climate(filename, opacity_ck):
     # Set composition
     mh = 10
     cto_relative = 1
-    cl_run.atmosphere(mh=mh, cto_relative=cto_relative, chem_method='on-the-fly')
+    cl_run.atmosphere(mh=mh, cto_relative=cto_relative, chem_method=chem_method)
 
     # Run model
     out = cl_run.climate(opacity_ck, save_all_profiles=True, with_spec=True)
