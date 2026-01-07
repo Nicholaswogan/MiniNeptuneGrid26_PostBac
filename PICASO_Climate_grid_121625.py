@@ -251,6 +251,8 @@ def PICASO_PT_Planet(rad_plan=1, mh='2.0', tint=60, semi_major_AU=1, ctoO='1', n
     
     """
 
+    print(f'Input Values: rad_plan={rad_plan}, mh={mh}, tint={tint}, semi_major_AU={semi_major_AU}, ctoO={ctoO}')
+    
     # Values of Planet
     radius_planet = rad_plan*6.371e+6*u.m # Converts from units of xEarth radius to m
 
@@ -401,15 +403,15 @@ def get_gridvals_PICASO_TP():
     log10_planet_metallicity = np.linspace(3, 3000, 10) # in units of solar metallicity, right now should be a string but that was opacity dependent (which may no longer depend on metallicities)
     tint_K = np.linspace(20, 400, 5) # in Kelvin
     semi_major_AU = np.linspace(0.3, 10, 10) # in AU 
-    ctoO_solar = ['0.01', '0.25', '0.5', '0.75', '1'] # in units of solar C/O
+    ctoO_solar = np.array(['0.01', '0.25', '0.5', '0.75', '1']) # in units of solar C/O
 
     """
     # Test Case:
-    rad_plan_earth_units = 2.61 # in units of xEarth radii
-    log10_planet_metallicity = '0.5' # in units of solar metallicity
-    tint_K = 155 # in Kelvin
-    semi_major_AU = 1.047920906403798 # in AU 
-    ctoO_solar = '1' # in units of solar C/O
+    rad_plan_earth_units = np.array([2.61]) # in units of xEarth radii
+    log10_planet_metallicity = np.array(['0.5']) # in units of solar metallicity
+    tint_K = np.array([155]) # in Kelvin
+    semi_major_AU = np.array([1.047920906403798]) # in AU 
+    ctoO_solar = np.array(['1']) # in units of solar C/O
 
 
     gridvals = (rad_plan_earth_units, log10_planet_metallicity, tint_K, semi_major_AU, ctoO_solar)
@@ -429,7 +431,7 @@ if __name__ == "__main__":
         gridvals=get_gridvals_PICASO_TP(), 
         filename='results/PICASO_climate_updatop_test.h5', 
         progress_filename='results/PICASO_climate_updatop_test.log'
-    )
+    ) 
 
 
 

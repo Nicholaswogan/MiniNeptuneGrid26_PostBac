@@ -197,6 +197,7 @@ def make_grid(model_func, gridvals, filename, progress_filename):
 
     if rank == 0:
         # Master process
+        print(gridvals)
         master(model_func, gridvals, filename, progress_filename)
     else:
         # Worker process
