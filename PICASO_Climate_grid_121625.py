@@ -1,5 +1,10 @@
 import warnings
 warnings.filterwarnings('ignore')
+
+import os
+os.environ['picaso_refdata']="/mnt/c/Users/lily/Documents/NASAUWPostbac/MiniNeptuneGrid26_PostBac/picasofiles/reference" 
+os.environ['PYSYN_CDBS']="/mnt/c/Users/lily/Documents/NASAUWPostbac/MiniNeptuneGrid26_PostBac/picasofiles/grp/redcat/trds"
+
 import picaso.justdoit as jdi
 import picaso.justplotit as jpi
 import astropy.units as u
@@ -415,6 +420,7 @@ def get_gridvals_PICASO_TP():
 
     """
 
+    """
     # Test Case: this was the _updatop_test files
     rad_plan_earth_units = np.array([2.61]) # in units of xEarth radii
     log10_planet_metallicity = np.array([0.5]) # in units of solar metallicity
@@ -426,11 +432,10 @@ def get_gridvals_PICASO_TP():
     """
     # Parameter Exploration
     rad_plan_earth_units = np.array([2.61]) # in units of xEarth radii
-    log10_planet_metallicity = np.array([3.4]) # in units of solar metallicity
+    log10_planet_metallicity = np.array([3.45]) # in units of solar metallicity
     tint_K = np.array([155]) # in Kelvin
     semi_major_AU = np.array([1]) # in AU 
     ctoO_solar = np.array([0.01]) # in units of solar C/O
-    """
 
     gridvals = (rad_plan_earth_units, log10_planet_metallicity, tint_K, semi_major_AU, ctoO_solar)
     
@@ -447,8 +452,8 @@ if __name__ == "__main__":
     gridutils.make_grid(
         model_func=PICASO_climate_model, 
         gridvals=get_gridvals_PICASO_TP(), 
-        filename='results/PICASO_climate_updatop_test.h5', 
-        progress_filename='results/PICASO_climate_updatop_test.log'
+        filename='results/PICASO_climate_updatop_3000metal_K218b.h5', 
+        progress_filename='results/PICASO_climate_updatop_3000metal_K218b.log'
     ) 
 
 

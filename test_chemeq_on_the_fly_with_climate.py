@@ -75,7 +75,7 @@ def plot():
 
     species = ['H2','CO2','CO','O2','H2O']
     for i,sp in enumerate(species):
-        ax.plot(on_the_fly['ptchem_df'][sp], on_the_fly['pressure'], c='C'+str(i), lw=3, ls='--')
+        ax.plot(on_the_fly['ptchem_df'][sp], on_the_fly['pressure'], c='C'+str(i), lw=3, ls='--', label=sp)
         
     ax.set_xscale('log')
     ax.set_yscale('log')
