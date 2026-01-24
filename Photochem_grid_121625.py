@@ -85,6 +85,8 @@ def find_PT_grid(filename='results/PICASO_climate_updatop_test.h5', rad_plan=Non
                      'semi_major':gridvals[3], 
                      'ctoO': np.array(gridvals_ctoO)}
 
+    print(gridvals_dict)
+
     with h5py.File(filename, 'r') as f:
         input_list = np.array([rad_plan, log10_planet_metal_float, tint, semi_major, ctoO])
         matches = list(f['inputs'] == input_list)
@@ -98,6 +100,7 @@ def find_PT_grid(filename='results/PICASO_climate_updatop_test.h5', rad_plan=Non
         print(gridvals_dict['planet_metallicity'])
         print(input_list[1])
         matching_indicies_metal = np.where(list(gridvals_dict['planet_metallicity'] == input_list[1]))
+        print(matching_indicies_metal)
         matching_indicies_tint = np.where(list(gridvals_dict['tint'] == input_list[2]))
         matching_indicies_semi_major = np.where(list(gridvals_dict['semi_major'] == input_list[3]))
         matching_indicies_ctoO = np.where(list(gridvals_dict['ctoO'] == input_list[4]))
@@ -406,7 +409,7 @@ def get_gridvals_Photochem():
     rad_plan_earth_units = np.array([2.61]) # in units of xEarth radii
     log10_planet_metallicity = np.array(['0.5']) # in units of solar metallicity
     tint_K = np.array([155]) # in Kelvin
-    semi_major_AU = np.array([1]) # in AU 
+    semi_major_AU = np.array([1.04]) # in AU 
     ctoO_solar = np.array([1]) # in units of solar C/O
     log_Kzz = np.array([5])
     

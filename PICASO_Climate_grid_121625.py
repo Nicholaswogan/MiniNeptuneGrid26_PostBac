@@ -383,7 +383,7 @@ def PICASO_climate_model(x):
         
         print(f"Loop iteration, Recalculating PT Profile: {count}")
         
-        out, base_case = PICASO_PT_Planet(log_mh=log10_planet_metallicity, tint=tint, total_flux=log10_totalflux, outputfile=None, pt_guillot=False, prior_out = out)
+        out, base_case = PICASO_PT_Planet(rad_plan=rad_plan_earth_units, log_mh=log10_planet_metallicity, tint=tint_K, semi_major_AU = semi_major_AU, ctoO=ctoO_solar, outputfile=None, pt_guillot=False, prior_out = out)
 
         if count == 3:
             print(f"Hit the maximum amount of loops without converging.")
