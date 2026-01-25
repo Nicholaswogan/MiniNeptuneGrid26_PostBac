@@ -432,16 +432,15 @@ def get_gridvals_PICASO_TP():
 
     """
 
-    
+    """
     # Test Case: this was the _updatop_test files
     rad_plan_earth_units = np.array([2.61]) # in units of xEarth radii
     log10_planet_metallicity = np.array(['3.5']) # in units of solar metallicity
     tint_K = np.array([155]) # in Kelvin
     semi_major_AU = np.array([1]) # in AU 
     ctoO_solar = np.array([0.01]) # in units of solar C/O
-
-
     """
+    
     
     # Parameter Exploration
     rad_plan_earth_units = np.array([1.6, 4]) # in units of xEarth radii
@@ -450,7 +449,6 @@ def get_gridvals_PICASO_TP():
     semi_major_AU = np.array([0.3, 10]) # in AU 
     ctoO_solar = np.array([0.01, 1]) # in units of solar C/O
 
-    """
 
     gridvals = (rad_plan_earth_units, log10_planet_metallicity, tint_K, semi_major_AU, ctoO_solar)
     
@@ -467,8 +465,8 @@ if __name__ == "__main__":
     gridutils.make_grid(
         model_func=PICASO_climate_model, 
         gridvals=get_gridvals_PICASO_TP(), 
-        filename='results/PICASO_climate_updatop_05logm_1co_K218b.h5', 
-        progress_filename='results/PICASO_climate_updatop_05logm_1co_K218b.log'
+        filename='results/PICASO_climate_updatop_paramext_K218b.h5', 
+        progress_filename='results/PICASO_climate_updatop_paramext_K218b.log'
     ) 
 
 
