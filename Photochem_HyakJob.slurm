@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=PICASO_grid
+#SBATCH --job-name=Photochem_grid
 
 #SBATCH --account=stf
 #SBATCH --partition=cpu-g2
@@ -10,8 +10,8 @@
 #SBATCH --time=24:00:00
 
 #SBATCH --export=all
-#SBATCH --output=picaso_grid.stdout
-#SBATCH --error=picaso_grid.stderr
+#SBATCH --output=photochem_grid.stdout
+#SBATCH --error=photochem_grid.stderr
 
 # Run the script 
-mpiexec -np 80 python PICASO_Climate_grid_121625.py
+mpiexec -np 80 python Photochem_grid_121625.py
