@@ -134,7 +134,7 @@ def mass_from_radius_chen_kipping_2017(R_rearth):
 
     return 10.0 ** logM
 
-def PICASO_PT_Planet(rad_plan=1, log_mh='2.0', tint=60, semi_major_AU=1, ctoO='1', nlevel=91, nofczns=1, nstr_upper=85, rfacv=0.5, outputfile=None, pt_guillot=True, prior_out=None):
+def PICASO_PT_Planet(rad_plan=1, log_mh=2.0, tint=60, semi_major_AU=1, ctoO='1', nlevel=91, nofczns=1, nstr_upper=85, rfacv=0.5, outputfile=None, pt_guillot=True, prior_out=None):
 
     """
     Calculates the semi-major distance from the Sun of a planet whose equilibrium temperature can vary.
@@ -143,7 +143,7 @@ def PICASO_PT_Planet(rad_plan=1, log_mh='2.0', tint=60, semi_major_AU=1, ctoO='1
 
     rad_plan = float
         This is the radius of the planet in units of x Earth radius.
-    mh = string
+    mh = float
         This is the metallicity of the planet in units of log10 x Solar
     tint = float
         This is the internal temperature of the planet in units of Kelvin
