@@ -59,10 +59,12 @@ def plot_PT(rad_plan=None, planet_metal=None, tint=None, semi_major=None, ctoO=N
     #plt.xlim(250,1750)
     
     plt.semilogy(PT_list[1],PT_list[0],color="r",linewidth=3, label='PICASO PT')
-    plt.semilogy(PT_list_Photochem[1],PT_list_Photochem[0]/(10**6),color="blue",linewidth=3, label='PICASO PT')
+    plt.semilogy(PT_list_Photochem[1],PT_list_Photochem[0]/(10**6),color="blue",linewidth=3, linestyle='--', label='Photochem PT')
     plt.minorticks_on()
     plt.tick_params(axis='both',which='major',length =30, width=2,direction='in',labelsize=23)
     plt.tick_params(axis='both',which='minor',length =10, width=2,direction='in',labelsize=23)
+
+    plt.legend()
 
     #Tef = stars.equilibrium_temperature(total_flux*1361, 0)
     #plt.title(f"Teff = {Tef} K, log(g)=4.4")
