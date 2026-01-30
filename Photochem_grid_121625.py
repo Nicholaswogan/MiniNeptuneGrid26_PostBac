@@ -75,7 +75,6 @@ def find_PT_grid(filename='results/PICASO_climate_updatop_paramext_K218b.h5', ra
         This provides whether or not the PICASO model converged (0 = False, 1 = True).
     
     """
-    log10_planet_metal_float = float(log10_planet_metallicity)
     gridvals_metal = [float(s) for s in gridvals[1]]
     gridvals_ctoO = [float(s) for s in gridvals[4]]
     
@@ -86,17 +85,13 @@ def find_PT_grid(filename='results/PICASO_climate_updatop_paramext_K218b.h5', ra
                      'ctoO': np.array(gridvals_ctoO)}
 
     with h5py.File(filename, 'r') as f:
-        input_list = np.array([rad_plan, log10_planet_metal_float, tint, semi_major, ctoO])
+        input_list = np.array([rad_plan, log10_planet_metallicity, tint, semi_major, ctoO])
         matches = list(f['inputs'] == input_list)
         print(f"This is the input list: {input_list}")
-        #print(list(f['inputs']))
-        #print(matches)
         row_matches = np.all(matches, axis=1)
         matching_indicies = np.where(row_matches)
 
         matching_indicies_radius = np.where(list(gridvals_dict['planet_radius'] == input_list[0]))
-        #print(gridvals_dict['planet_metallicity'])
-        #print(input_list[1])
         matching_indicies_metal = np.where(list(gridvals_dict['planet_metallicity'] == input_list[1]))
         #print(matching_indicies_metal)
         matching_indicies_tint = np.where(list(gridvals_dict['tint'] == input_list[2]))
