@@ -48,11 +48,7 @@ import PICASO_Climate_grid_121625 as PICASO_Climate_grid
 
 # Finds the associated PT profile and calculates Photochemical Composition of a Planet
 
-<<<<<<< HEAD
 def find_PT_grid(filename='results/PICASO_climate_updatop_paramext_K218b.h5', rad_plan=None, log10_planet_metallicity=None, tint=None, semi_major=None, ctoO=None, gridvals=PICASO_Climate_grid.get_gridvals_PICASO_TP()):
-=======
-def find_PT_grid(filename='results/PICASO_climate_updatop_paraext_K218b.h5', rad_plan=None, log10_planet_metallicity=None, tint=None, semi_major=None, ctoO=None, gridvals=PICASO_Climate_grid.get_gridvals_PICASO_TP()):
->>>>>>> 6bf8573aa7e1773d3959b3cabf7705e8c3aaf3bc
     """
     This finds the matching PT profile in the PICASO grid to be used for Photochem grid calculation.
     
@@ -453,11 +449,7 @@ def Photochem_1D_model(x):
 
     # For Tijuca
     rad_plan_earth_units, log10_planet_metallicity, tint_K, semi_major_AU, ctoO_solar, log_Kzz = x
-<<<<<<< HEAD
     sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-=======
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paraext_K218b.h5')
->>>>>>> 6bf8573aa7e1773d3959b3cabf7705e8c3aaf3bc
 
     # Merge the sol & soleq & convergence arrays into a single dictionary
     modified_sol_dict = {key + "_sol": value for key, value in sol.items()}

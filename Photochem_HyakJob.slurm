@@ -3,7 +3,7 @@
 #SBATCH --job-name=Photochem_grid
 
 #SBATCH --account=stf
-#SBATCH --partition=cpu-g2
+#SBATCH --partition=compute
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=40
 #SBATCH --mem=50G
