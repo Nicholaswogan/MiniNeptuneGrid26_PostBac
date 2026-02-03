@@ -1,225 +1,482 @@
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
     gridutils.make_grid(
   File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
-    gridutils.make_grid(
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
-    worker()
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
-    res = model_func(x)
-          ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
-    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
-                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 329, in Photochem_Gas_Giant
-    pc.initialize_to_climate_equilibrium_PT(P, T, Kzz, 10**(log10_planet_metallicity), ctoO)
-  File "/gscratch/stf/elizap/envs/subneptune/lib/python3.12/site-packages/photochem/extensions/gasgiants.py", line 244, in initialize_to_climate_equilibrium_PT
-    raise Exception('BOA in photochemical model wants to be deeper than BOA of climate model.')
-Exception: BOA in photochemical model wants to be deeper than BOA of climate model.
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
 Traceback (most recent call last):
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 470, in <module>
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+    gridutils.make_grid(
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 473, in <module>
     gridutils.make_grid(
   File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 206, in make_grid
     worker()
   File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    worker()
+    res = model_func(x)
     res = model_func(x)
           ^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 452, in Photochem_1D_model
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
     sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 336, in Photochem_Gas_Giant
-    assert pc.gdat.total_step_counter > pc.gdat.max_total_step - 10
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError
-[2026-01-30T13:21:14.519] error: *** STEP 32750692.0 ON n3005 CANCELLED AT 2026-01-30T13:21:14 DUE to SIGNAL Terminated ***
-[2026-01-30T13:21:14.521] error: *** JOB 32750692 ON n3005 CANCELLED AT 2026-01-30T13:21:14 DUE to SIGNAL Terminated ***
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    worker()
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/gridutils.py", line 159, in worker
+    res = model_func(x)
+          ^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 455, in Photochem_1D_model
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+    sol, soleq, pc, convergence_values, converged = Photochem_Gas_Giant(rad_plan=rad_plan_earth_units, log10_planet_metallicity=log10_planet_metallicity, tint=tint_K, semi_major=semi_major_AU, ctoO=ctoO_solar, log_Kzz=log_Kzz, PT_filename='results/PICASO_climate_updatop_paramext_K218b.h5')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mmfs1/gscratch/stf/elizap/MiniNeptuneGrid26_PostBac/Photochem_grid_121625.py", line 260, in Photochem_Gas_Giant
+    P_extended, T_extended = linear_extrapolate_TP(PT_list[0], PT_list[1]) # Extend the end to bypass BOA Error of mismatching boundary conditions.
+                                                   ~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+[2026-02-03T12:10:53.032] error: *** STEP 32818275.0 ON n3470 CANCELLED AT 2026-02-03T12:10:53 DUE to SIGNAL Terminated ***
+[2026-02-03T12:10:53.032] error: *** JOB 32818275 ON n3470 CANCELLED AT 2026-02-03T12:10:53 DUE to SIGNAL Terminated ***
