@@ -50,7 +50,7 @@ import numpy as np
 import pandas as pd
 import copy
     
-def earth_spectrum(df_mol_earth, phase, atmosphere_kwargs={}):
+def earth_spectrum(opacity_path, df_mol_earth, phase, atmosphere_kwargs={}):
 
     """
     Calculates the Modern Earth Reflected Spectrum at full phase around the same star (Sun). 
@@ -97,7 +97,7 @@ def earth_spectrum(df_mol_earth, phase, atmosphere_kwargs={}):
     stellar_Teff = 5778 # K
     stellar_metal = 0.0 # log10(metallicity)
     stellar_logg = 4.4 # log10(gravity), in cgs units
-    opacity = jdi.opannection(method='resortrebin', wave_range=[0.3,2.5])
+    opacity = jdi.opannection(method=opacity_path, wave_range=[0.3,2.5])
     
     earth.star(opannection=opacity,temp=stellar_Teff,logg=stellar_logg,semi_major=1, metal=stellar_metal,
                semi_major_unit=u.Unit('au')) 
@@ -349,8 +349,8 @@ def find_pbot(sol=None, solaer=None, tol=0.9):
 
 # Make a Global Variable
 
-#opacity_path=f'/Users/epawelka/Documents/NASA_Ames_ProjS25/AmesProjS25Work/picaso_v4/reference/opacities/opacities_0.3_15_R15000.db'
-#OPACITY = jdi.opannection(filename_db=opacity_path, wave_range=[0.3,2.5])
+opacity_path=f'/Users/lily/Documents/NASAUWPostbac/MiniNeptuneGrid26_PostBac/picaso/reference/opacities/opacities_photochem_0.1_250.0_R15000.db'
+OPACITY = jdi.opannection(filename_db=opacity_path, wave_range=[0.1,2.5])
 
 # Flip the data between PICASO and Photochem
 
