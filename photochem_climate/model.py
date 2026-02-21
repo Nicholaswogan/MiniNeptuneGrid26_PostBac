@@ -8,7 +8,7 @@ import numpy as np
 from scipy import special
 from astropy import constants
 
-from clima import AdiabatClimate, ClimaException
+from photochem.clima import AdiabatClimate, ClimaException
 from photochem.utils import stars
 from photochem.utils import settings_dict_for_climate
 from photochem.equilibrate import ChemEquiAnalysis
@@ -81,6 +81,9 @@ class AdiabatClimateEquilibrium(AdiabatClimate):
         self.rad.has_hard_surface = False
         self.rad.surface_albedo = np.ones(self.rad.surface_albedo.shape[0])*0.0
         self.max_rc_iters = 50
+        self.require_mode2 = True
+        self.convective_max_boundary_shift = 1
+        self.max_rc_iters_convection = 5
         self.P_top = P_top
 
         # Equilibrium chemistry solver
@@ -142,9 +145,6 @@ class AdiabatClimateEquilibrium(AdiabatClimate):
         T_surf_guess = float(T[0])
         T_guess = T[1:].copy()
 
-        self.convective_max_boundary_shift = 1
-        self.max_rc_iters_convection = 5
-
         converged = False
         try:
             converged = self.RCE(P_i, T_surf_guess, T_guess, convecting_with_below, custom_dry_mix=custom_dry_mix)
@@ -160,35 +160,22 @@ class AdiabatClimateEquilibrium(AdiabatClimate):
                 converged = False
             self.dt_increment = dt_increment_save
         
-        # if not converged:
-        #     self.dt_increment = 1.1
-        #     convecting_with_below[:] = False
-        #     convecting_with_below[:10] = True
-        #     converged = self.RCE(P_i, T_surf_guess, T_guess, convecting_with_below, custom_dry_mix=custom_dry_mix)
-        #     assert converged
-        
-        difference = self.lapse_rate - self.lapse_rate_intended
-        if np.any(difference > np.maximum(1e-3, 2.0e-2*np.abs(self.lapse_rate_intended))):
-            self.max_rc_iters_convection = -1
-            self.convective_max_boundary_shift = 1
-            converged = self.RCE(P_i, self.T_surf, self.T, self.convecting_with_below, custom_dry_mix=custom_dry_mix)
-            assert converged
-
         return np.append(self.T_surf, self.T)
 
 
-    def solve(self, stellar_flux, T_int, metallicity, CtoO, *, T_int_factor=1.0, tol=2.0, max_tol=5.0, **kwargs):
+    def solve(self, stellar_flux, T_int, metallicity, CtoO, *, T_int_factor=1.0, tol=2.0, max_tol=5.0, convecting_with_below_init=None, **kwargs):
 
-        convecting_with_below_init = self.convecting_with_below.copy()
-        convecting_with_below_init[:] = False
-        if T_int < 1:
-            pass
-        elif 1 <= T_int < 100:
-            convecting_with_below_init[0] = True
-        elif 100 <= T_int < 200:
-            convecting_with_below_init[:3] = True
-        else:
-            convecting_with_below_init[:10] = True
+        if convecting_with_below_init is None:
+            convecting_with_below_init = self.convecting_with_below.copy()
+            convecting_with_below_init[:] = False
+            if T_int < 1:
+                pass
+            elif 1 <= T_int < 100:
+                convecting_with_below_init[0] = True
+            elif 100 <= T_int < 200:
+                convecting_with_below_init[:3] = True
+            else:
+                convecting_with_below_init[:10] = True
 
         first_call = True
         def g(T):
