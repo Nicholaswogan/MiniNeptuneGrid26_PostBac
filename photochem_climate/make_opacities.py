@@ -11,12 +11,89 @@ import zipfile
 
 import h5py
 import numpy as np
+from numba import njit
 
 
 CURRENT_DIR = Path(__file__).resolve().parent
 LOSCHMIDT_CM3 = 2.6867805e19
 BOLTZMANN_CGS = 1.380649e-16
 SMALL = 1.0e-300
+MERGE_ALGO_VERSION = "exok_style_v1_num300"
+MERGE_LOGK_NUM = 300
+
+
+@njit(cache=True)
+def _merge_corrk_bins_exok_style_numba(
+    log10k: np.ndarray,
+    wno_edges_desc: np.ndarray,
+    ggrid: np.ndarray,
+    merge: int,
+    num: int,
+    small: float,
+) -> tuple[np.ndarray, np.ndarray]:
+    nwav, ntemp, npress, ngauss = log10k.shape
+    nout = (nwav + merge - 1) // merge
+    merged = np.empty((nout, ntemp, npress, ngauss), dtype=np.float64)
+    merged_edges = np.empty(nout + 1, dtype=np.float64)
+    merged_edges[0] = wno_edges_desc[0]
+
+    old_g = ggrid.copy()
+    old_g[0] = 0.0
+    old_g[-1] = 1.0
+    new_g = ggrid.copy()
+    ln10 = np.log(10.0)
+
+    for out_i in range(nout):
+        i0 = out_i * merge
+        i1 = min((out_i + 1) * merge, nwav)
+        merged_edges[out_i + 1] = wno_edges_desc[i1]
+
+        nb = i1 - i0
+        widths = np.empty(nb, dtype=np.float64)
+        wsum = 0.0
+        for ib in range(nb):
+            w = wno_edges_desc[i0 + ib] - wno_edges_desc[i0 + ib + 1]
+            if w < 0.0:
+                w = -w
+            widths[ib] = w
+            wsum += w
+        for ib in range(nb):
+            widths[ib] /= wsum
+
+        for it in range(ntemp):
+            for ip in range(npress):
+                lkmin = 1.0e300
+                lkmax = -1.0e300
+                for ib in range(nb):
+                    v0 = log10k[i0 + ib, it, ip, 0] * ln10
+                    v1 = log10k[i0 + ib, it, ip, ngauss - 1] * ln10
+                    if v0 < lkmin:
+                        lkmin = v0
+                    if v1 > lkmax:
+                        lkmax = v1
+
+                if lkmin == lkmax:
+                    kval = np.exp(lkmax)
+                    for ig in range(ngauss):
+                        merged[out_i, it, ip, ig] = np.log10(max(kval, small))
+                    continue
+
+                lkmax = lkmax + (lkmax - lkmin) / (num - 3.0)
+                lkmin = lkmin - (lkmax - lkmin) / (num - 3.0)
+                logkgrid = np.linspace(lkmin, lkmax, num)
+                newg = np.zeros(num, dtype=np.float64)
+
+                for ib in range(nb):
+                    tmp_logk = np.empty(ngauss, dtype=np.float64)
+                    for ig in range(ngauss):
+                        tmp_logk[ig] = log10k[i0 + ib, it, ip, ig] * ln10
+                    newg += np.interp(logkgrid, tmp_logk, old_g) * widths[ib]
+
+                out_linear = np.interp(new_g, newg, np.exp(logkgrid))
+                for ig in range(ngauss):
+                    merged[out_i, it, ip, ig] = np.log10(max(out_linear[ig], small))
+
+    return merged, merged_edges
 
 
 def _safe_extract_zip(zip_file: zipfile.ZipFile, extract_to: Path) -> None:
@@ -129,6 +206,44 @@ def _wave_edges_um_from_wno(wno: np.ndarray, delta_wno: np.ndarray) -> np.ndarra
     return (1.0e4 / wno_edges)[::-1]
 
 
+def _wno_edges_from_centers_and_widths(wno: np.ndarray, delta_wno: np.ndarray) -> np.ndarray:
+    left = wno - (delta_wno / 2.0)
+    right = wno + (delta_wno / 2.0)
+    return np.concatenate(([left[0]], right))
+
+
+def _validate_merge(merge: int) -> int:
+    if isinstance(merge, bool) or not isinstance(merge, int):
+        raise TypeError(f"'merge' must be an integer. Received: {type(merge).__name__}")
+    if merge <= 1:
+        return 1
+    return merge
+
+
+def _merge_corrk_bins_exok_style(
+    log10k: np.ndarray,
+    wno_edges_desc: np.ndarray,
+    ggrid: np.ndarray,
+    merge: int,
+    *,
+    num: int = MERGE_LOGK_NUM,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Merge adjacent spectral bins using exo-k-style CDF mixing in log-k space."""
+    merge = _validate_merge(merge)
+    if merge == 1:
+        return log10k, wno_edges_desc
+
+    merged64, merged_edges = _merge_corrk_bins_exok_style_numba(
+        log10k.astype(np.float64),
+        wno_edges_desc.astype(np.float64),
+        np.asarray(ggrid, dtype=np.float64),
+        merge,
+        num,
+        SMALL,
+    )
+    return merged64.astype(np.float32), merged_edges
+
+
 def _write_h5_kdistribution(
     out_file: Path,
     species: str,
@@ -182,19 +297,26 @@ def convert_kdistributions(
     output_dir: Path,
     marker_dir: Path,
     *,
+    merge: int = 1,
     force: bool = False,
-) -> tuple[int, np.ndarray]:
+) -> tuple[int, np.ndarray, int]:
     src_files = sorted(picaso_downloads.glob("*_1460.hdf5"))
     if not src_files:
         raise FileNotFoundError(f"No PICASO k-distribution files found in: {picaso_downloads}")
 
+    merge = _validate_merge(merge)
     marker = marker_dir / "kdistributions.done"
-    fingerprint = _source_fingerprint(src_files)
     with h5py.File(src_files[0], "r") as f0:
         reference_wno = f0["wno"][:]
+    expected_nwav = (reference_wno.size + merge - 1) // merge
+
+    fingerprint = _source_fingerprint(
+        src_files,
+        extra={"merge": merge, "merge_algo": MERGE_ALGO_VERSION, "merge_num": MERGE_LOGK_NUM},
+    )
 
     if not force and _marker_matches(marker, fingerprint):
-        return len(src_files), reference_wno
+        return len(src_files), reference_wno, expected_nwav
 
     kout = output_dir / "kdistributions"
     kout.mkdir(parents=True, exist_ok=True)
@@ -210,6 +332,7 @@ def convert_kdistributions(
             temperatures = f["temperatures"][:]
             wno = f["wno"][:]
             delta_wno = f["delta_wno"][:]
+            gauss_pts = f["gauss_pts"][:]
             gauss_wts = f["gauss_wts"][:]
 
         p_axis = np.unique(pressures)
@@ -218,10 +341,21 @@ def convert_kdistributions(
             raise ValueError(f"Unexpected P/T layout in {src}")
 
         wavelengths = _wave_edges_um_from_wno(wno, delta_wno)
+        wno_edges_desc = _wno_edges_from_centers_and_widths(wno, delta_wno)[::-1]
 
         # PICASO stores ln(k). Convert to log10(k): log10(k)=ln(k)/ln(10).
         log10k = (kcoeffs / np.log(10.0)).transpose(2, 1, 0, 3)
         log10k = log10k[::-1, :, :, :]
+
+        if merge > 1:
+            log10k, merged_wno_edges_desc = _merge_corrk_bins_exok_style(
+                log10k,
+                wno_edges_desc,
+                gauss_pts,
+                merge,
+                num=MERGE_LOGK_NUM,
+            )
+            wavelengths = 1.0e4 / merged_wno_edges_desc
 
         log10p = np.log10(p_axis)
         _write_h5_kdistribution(
@@ -250,7 +384,7 @@ def convert_kdistributions(
         f.create_dataset("ir_wavl", data=first_wavelengths.astype(np.float32))
 
     _write_marker(marker, fingerprint)
-    return len(src_files), reference_wno
+    return len(src_files), reference_wno, first_wavelengths.size - 1
 
 
 def _load_h2minus_table(csv_file: Path) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
@@ -578,6 +712,11 @@ def _validate_outputs(output_dir: Path) -> None:
                 raise RuntimeError(f"bins.h5 missing dataset '{key}'")
             if not np.all(np.diff(f[key][:]) > 0.0):
                 raise RuntimeError(f"bins.h5/{key} is not monotonic ascending")
+        if ref_wavelengths is not None:
+            if not np.allclose(f["sol_wavl"][:], ref_wavelengths, rtol=0.0, atol=1e-8):
+                raise RuntimeError("bins.h5/sol_wavl does not match kdistribution wavelengths")
+            if not np.allclose(f["ir_wavl"][:], ref_wavelengths, rtol=0.0, atol=1e-8):
+                raise RuntimeError("bins.h5/ir_wavl does not match kdistribution wavelengths")
 
     cia_files = sorted(cdir.glob("*.h5"))
     if not cia_files:
@@ -609,6 +748,7 @@ def build_picaso_opacities(
     downloads_root: str | Path = "photochem_climate",
     picaso_downloads: str | Path = "photochem_climate/picaso_downloads",
     output_dir: str | Path = "photochem_climate/picaso_opacities",
+    merge: int = 1,
     force: bool = False,
 ) -> Path:
     downloads_root_path = _resolve_path(downloads_root)
@@ -642,7 +782,10 @@ def build_picaso_opacities(
         )
     rayleigh_source_dir = rayleigh_candidates[0]
 
-    nk, k_wno = convert_kdistributions(picaso_downloads_path, output_path, marker_dir, force=force)
+    merge = _validate_merge(merge)
+    nk, k_wno, nwav_merged = convert_kdistributions(
+        picaso_downloads_path, output_path, marker_dir, merge=merge, force=force
+    )
     wno, temps = convert_cia_from_sqlite(sqlite_db, output_path, marker_dir, target_wno=k_wno, force=force)
     nspecial = convert_special_hminus_cia(h2minus_csv, wno, temps, output_path, marker_dir, force=force)
     nxs = convert_hminus_bf_xsection(wno, output_path, marker_dir, force=force)
@@ -652,6 +795,8 @@ def build_picaso_opacities(
 
     ncia = len(list((output_path / "CIA").glob("*.h5")))
     print("Opacity conversion complete")
+    print(f"  merge factor:   {merge}")
+    print(f"  k bins:         {nwav_merged}")
     print(f"  kdistributions: {nk}")
     print(f"  CIA:            {ncia} (includes {nspecial} special H- sources)")
     print(f"  xsections:      {nxs}")
@@ -688,12 +833,14 @@ def main() -> None:
         extract_to=local_picaso_downloads,
     )
 
-    build_picaso_opacities(
-        downloads_root=CURRENT_DIR,
-        picaso_downloads=local_picaso_downloads,
-        output_dir=local_output,
-        force=False,
-    )
+    for merge in [1,2,3,4,5,6,7,8,9,10,11,12]:
+        build_picaso_opacities(
+            downloads_root=CURRENT_DIR,
+            picaso_downloads=local_picaso_downloads,
+            output_dir=CURRENT_DIR / f"picaso_opacities_merge{merge}",
+            merge=merge,
+            force=False,
+        )
 
 
 if __name__ == "__main__":
