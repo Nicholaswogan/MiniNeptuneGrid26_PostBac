@@ -168,9 +168,9 @@ class AdiabatClimateEquilibrium(AdiabatClimate):
         if convecting_with_below_init is None:
             convecting_with_below_init = self.convecting_with_below.copy()
             convecting_with_below_init[:] = False
-            if T_int < 1:
+            if T_int < 50:
                 pass
-            elif 1 <= T_int < 100:
+            elif 50 <= T_int < 100:
                 convecting_with_below_init[0] = True
             elif 100 <= T_int < 200:
                 convecting_with_below_init[:3] = True
